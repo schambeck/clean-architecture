@@ -29,8 +29,7 @@ class NotificationRepositoryImpl implements NotificationRepository {
 
 	@Override
 	public Notification findById(UUID id) {
-		NotificationEntity entity = jpaRepository.findById(id)
-				.orElseThrow(() -> new NotFoundException(format("Entity %s not found", id)));
+		NotificationEntity entity = findByIdOrThrow(id);
 		return toDomain(entity);
 	}
 
@@ -42,8 +41,20 @@ class NotificationRepositoryImpl implements NotificationRepository {
 	}
 
 	@Override
+	public void markAsRead(UUID id) {
+		NotificationEntity entity = findByIdOrThrow(id);
+		entity.setRead(true);
+		jpaRepository.save(entity);
+	}
+
+	@Override
 	public long countByReadIsFalse() {
 		return jpaRepository.countByReadIsFalse();
+	}
+
+	private NotificationEntity findByIdOrThrow(UUID id) {
+		return jpaRepository.findById(id)
+				.orElseThrow(() -> new NotFoundException(format("Entity %s not found", id)));
 	}
 
 }

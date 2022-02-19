@@ -13,6 +13,8 @@ public interface NotificationRepository {
 
     List<Notification> findAll();
 
+    void markAsRead(UUID id);
+
     long countByReadIsFalse();
 
 }

@@ -37,11 +37,11 @@ class NotificationRestEntryPoint implements NotificationEntryPoint {
 		return controller.findAll();
 	}
 
+	@Override
 	@PutMapping("/{id}/actions/mark-as-read")
 	@ResponseStatus(OK)
-	void markAsRead(@PathVariable("id") UUID id) {
+	public void markAsRead(@PathVariable("id") UUID id) {
 		controller.markAsRead(id);
-//		return sendNotification(countUnread);
 	}
 
 	@Override
