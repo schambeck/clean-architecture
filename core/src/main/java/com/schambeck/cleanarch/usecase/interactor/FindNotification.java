@@ -1,4 +1,4 @@
-package com.schambeck.cleanarch.usecase;
+package com.schambeck.cleanarch.usecase.interactor;
 
 import com.schambeck.cleanarch.entity.Notification;
 

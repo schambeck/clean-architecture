@@ -2,9 +2,9 @@ package com.schambeck.cleanarch.entrypoint.controller;
 
 import com.schambeck.cleanarch.entrypoint.controller.model.NotificationWeb;
 import com.schambeck.cleanarch.dataprovider.mapper.NotificationMapper;
-import com.schambeck.cleanarch.usecase.MarkAsRead;
-import com.schambeck.cleanarch.usecase.SaveNotification;
-import com.schambeck.cleanarch.usecase.FindNotification;
+import com.schambeck.cleanarch.usecase.interactor.MarkAsRead;
+import com.schambeck.cleanarch.usecase.interactor.SaveNotification;
+import com.schambeck.cleanarch.usecase.interactor.FindNotification;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
