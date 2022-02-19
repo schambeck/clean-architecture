@@ -3,18 +3,19 @@ package com.schambeck.cleanarch.dataprovider;
 import com.schambeck.cleanarch.entity.Notification;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public interface NotificationRepository {
 
     Notification create(Notification notification);
 
-    Notification findById(UUID id);
+    Optional<Notification> findById(UUID id);
 
     List<Notification> findAll();
 
-    void markAsRead(UUID id);
-
     long countByReadIsFalse();
+
+    void markAsRead(Notification notification);
 
 }
