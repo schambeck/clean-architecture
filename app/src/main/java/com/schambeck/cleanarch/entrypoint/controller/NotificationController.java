@@ -3,7 +3,7 @@ package com.schambeck.cleanarch.entrypoint.controller;
 import com.schambeck.cleanarch.entrypoint.controller.model.NotificationWeb;
 import com.schambeck.cleanarch.dataprovider.mapper.NotificationMapper;
 import com.schambeck.cleanarch.usecase.interactor.MarkAsRead;
-import com.schambeck.cleanarch.usecase.interactor.SaveNotification;
+import com.schambeck.cleanarch.usecase.interactor.CreateNotification;
 import com.schambeck.cleanarch.usecase.interactor.FindNotification;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -19,13 +19,13 @@ import static com.schambeck.cleanarch.dataprovider.mapper.NotificationMapper.toW
 @RequiredArgsConstructor
 public class NotificationController {
 
-    private final SaveNotification create;
+    private final CreateNotification create;
     private final FindNotification find;
     private final MarkAsRead markAsRead;
 
-    public NotificationWeb save(NotificationWeb notificationWeb) {
+    public NotificationWeb create(NotificationWeb notificationWeb) {
         var notification = toDomain(notificationWeb);
-        return toWeb(create.save(notification));
+        return toWeb(create.execute(notification));
     }
 
     public NotificationWeb findById(UUID id) {

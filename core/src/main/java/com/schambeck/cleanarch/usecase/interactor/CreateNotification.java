@@ -2,8 +2,8 @@ package com.schambeck.cleanarch.usecase.interactor;
 
 import com.schambeck.cleanarch.entity.Notification;
 
-public interface SaveNotification {
+public interface CreateNotification {
 
-    Notification save(Notification notification);
+    Notification execute(Notification notification);
 
 }

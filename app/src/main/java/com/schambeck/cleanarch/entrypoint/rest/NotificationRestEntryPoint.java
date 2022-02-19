@@ -22,7 +22,7 @@ class NotificationRestEntryPoint implements NotificationEntryPoint {
 	@Override
 	@PostMapping
 	public NotificationWeb create(@RequestBody NotificationWeb notificationWeb) {
-		return controller.save(notificationWeb);
+		return controller.create(notificationWeb);
 	}
 
 	@Override

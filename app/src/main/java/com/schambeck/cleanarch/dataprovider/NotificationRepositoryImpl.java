@@ -22,7 +22,7 @@ class NotificationRepositoryImpl implements NotificationRepository {
 	private final JpaNotificationRepository jpaRepository;
 
 	@Override
-	public Notification save(Notification notification) {
+	public Notification create(Notification notification) {
 		NotificationEntity entity = toEntity(notification);
 		return toDomain(jpaRepository.save(entity));
 	}

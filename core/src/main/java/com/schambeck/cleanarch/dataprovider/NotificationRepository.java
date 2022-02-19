@@ -7,7 +7,7 @@ import java.util.UUID;
 
 public interface NotificationRepository {
 
-    Notification save(Notification notification);
+    Notification create(Notification notification);
 
     Notification findById(UUID id);
 
