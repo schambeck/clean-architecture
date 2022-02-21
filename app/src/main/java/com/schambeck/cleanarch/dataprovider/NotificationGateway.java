@@ -16,7 +16,7 @@ import static com.schambeck.cleanarch.dataprovider.mapper.NotificationMapper.toE
 
 @Repository
 @RequiredArgsConstructor
-class NotificationRepositoryImpl implements NotificationRepository {
+class NotificationGateway implements NotificationRepository {
 
 	private final JpaNotificationRepository jpaRepository;
 
