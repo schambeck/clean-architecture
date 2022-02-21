@@ -2,7 +2,7 @@ package com.schambeck.cleanarch.entrypoint.controller;
 
 import com.schambeck.cleanarch.entrypoint.controller.model.NotificationWeb;
 import com.schambeck.cleanarch.dataprovider.mapper.NotificationMapper;
-import com.schambeck.cleanarch.usecase.interactor.MarkAsRead;
+import com.schambeck.cleanarch.usecase.interactor.MarkAsReadNotification;
 import com.schambeck.cleanarch.usecase.interactor.CreateNotification;
 import com.schambeck.cleanarch.usecase.interactor.FindNotification;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +21,7 @@ public class NotificationController {
 
     private final CreateNotification create;
     private final FindNotification find;
-    private final MarkAsRead markAsRead;
+    private final MarkAsReadNotification markAsRead;
 
     public NotificationWeb create(NotificationWeb notificationWeb) {
         var notification = toDomain(notificationWeb);
