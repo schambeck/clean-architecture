@@ -1,10 +1,11 @@
 package com.schambeck.cleanarch.entrypoint.controller;
 
-import com.schambeck.cleanarch.entrypoint.controller.model.NotificationWeb;
 import com.schambeck.cleanarch.dataprovider.mapper.NotificationMapper;
-import com.schambeck.cleanarch.usecase.interactor.MarkAsReadNotification;
+import com.schambeck.cleanarch.entrypoint.controller.model.NotificationWeb;
+import com.schambeck.cleanarch.usecase.interactor.CountUnreadNotification;
 import com.schambeck.cleanarch.usecase.interactor.CreateNotification;
 import com.schambeck.cleanarch.usecase.interactor.FindNotification;
+import com.schambeck.cleanarch.usecase.interactor.MarkAsReadNotification;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +23,7 @@ public class NotificationController {
     private final CreateNotification create;
     private final FindNotification find;
     private final MarkAsReadNotification markAsRead;
+    private final CountUnreadNotification countUnread;
 
     public NotificationWeb create(NotificationWeb notificationWeb) {
         var notification = toDomain(notificationWeb);
@@ -43,8 +45,8 @@ public class NotificationController {
         markAsRead.execute(id);
     }
 
-    public long countByReadIsFalse() {
-        return find.countByReadIsFalse();
+    public long countUnread() {
+        return countUnread.execute();
     }
 
 }

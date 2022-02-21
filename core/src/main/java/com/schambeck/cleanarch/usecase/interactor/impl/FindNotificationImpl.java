@@ -29,9 +29,4 @@ class FindNotificationImpl implements FindNotification {
         return repository.findAll();
     }
 
-    @Override
-    public long countByReadIsFalse() {
-        return repository.countByReadIsFalse();
-    }
-
 }

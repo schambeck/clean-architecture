@@ -14,7 +14,7 @@ public interface NotificationRepository {
 
     List<Notification> findAll();
 
-    long countByReadIsFalse();
+    long countUnread();
 
     void markAsRead(Notification notification);
 

@@ -49,7 +49,7 @@ class NotificationRestEntryPoint implements NotificationEntryPoint {
 	@ResponseStatus(OK)
 	public CountUnreadMessage countUnread() {
 		return CountUnreadMessage.builder()
-				.countUnread(controller.countByReadIsFalse())
+				.countUnread(controller.countUnread())
 				.build();
 	}
 

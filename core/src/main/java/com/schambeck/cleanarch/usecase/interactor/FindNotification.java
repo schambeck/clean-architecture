@@ -11,6 +11,4 @@ public interface FindNotification {
 
     List<Notification> findAll();
 
-    long countByReadIsFalse();
-
 }

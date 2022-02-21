@@ -47,7 +47,7 @@ class NotificationRepositoryImpl implements NotificationRepository {
 	}
 
 	@Override
-	public long countByReadIsFalse() {
+	public long countUnread() {
 		return jpaRepository.countByReadIsFalse();
 	}
 
