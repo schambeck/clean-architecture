@@ -40,8 +40,8 @@ class NotificationGateway implements NotificationRepository {
 	}
 
 	@Override
-	public void markAsRead(Notification notification) {
-		jpaRepository.updateRead(notification.getId(), true);
+	public void updateRead(UUID id, Boolean read) {
+		jpaRepository.updateRead(id, read);
 	}
 
 	@Override

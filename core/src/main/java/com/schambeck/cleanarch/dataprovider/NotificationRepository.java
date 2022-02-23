@@ -16,6 +16,6 @@ public interface NotificationRepository {
 
     long countUnread();
 
-    void markAsRead(Notification notification);
+    void updateRead(UUID id, Boolean read);
 
 }
