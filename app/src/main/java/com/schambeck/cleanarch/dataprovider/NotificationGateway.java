@@ -41,9 +41,7 @@ class NotificationGateway implements NotificationRepository {
 
 	@Override
 	public void markAsRead(Notification notification) {
-		NotificationEntity entity = toEntity(notification);
-		entity.setRead(true);
-		jpaRepository.save(entity);
+		jpaRepository.updateRead(notification.getId(), true);
 	}
 
 	@Override
