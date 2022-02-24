@@ -1,16 +1,15 @@
-package com.schambeck.cleanarch.entity.vo;
+package com.schambeck.cleanarch.entrypoint.controller.model;
 
-import com.schambeck.cleanarch.entity.Notification;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @Getter
-@Builder(toBuilder = true)
+@Builder
 @RequiredArgsConstructor
 public class CountUnreadMessage {
 
     private final Long countUnread;
-    private final Notification notification;
+    private final NotificationWeb notification;
 
 }

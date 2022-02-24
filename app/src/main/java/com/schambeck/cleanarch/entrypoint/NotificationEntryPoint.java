@@ -1,6 +1,6 @@
 package com.schambeck.cleanarch.entrypoint;
 
-import com.schambeck.cleanarch.entity.vo.CountUnreadMessage;
+import com.schambeck.cleanarch.entrypoint.controller.model.CountUnreadMessage;
 import com.schambeck.cleanarch.entrypoint.controller.model.NotificationWeb;
 
 import java.util.List;
@@ -14,7 +14,7 @@ public interface NotificationEntryPoint {
 
     List<NotificationWeb> findAll();
 
-    void markAsRead(UUID id);
+    CountUnreadMessage markAsRead(UUID id);
 
     CountUnreadMessage countUnread();
 
