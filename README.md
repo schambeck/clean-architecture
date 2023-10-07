@@ -81,7 +81,7 @@ $ make run
 ------------------------------------------------------------------------------------------
 
 ## References
-- [Descomplicando a Clean Architecture](https://medium.com/luizalabs/descomplicando-a-clean-architecture-cf4dfc4a1ac6 "A pattern language for microservices")
-- [Uncle Bob Blog](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html "By Chris Richardson")
-- [Livro: Clean Architecture: A Craftsman’s Guide to Software Structure](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html "By Chris Richardson")
-- [Artigo: Criando uma aplicação modular muito além do Clean Architecture](https://medium.com/luizalabs/criando-uma-aplica%C3%A7%C3%A3o-modular-muito-al%C3%A9m-do-clean-architecture-5dde3687c5d6 "By Chris Richardson")
+- [Descomplicando a Clean Architecture](https://medium.com/luizalabs/descomplicando-a-clean-architecture-cf4dfc4a1ac6 "Simple Clean Architecture")
+- [Uncle Bob Blog](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html "")
+- [Book: Clean Architecture: A Craftsman’s Guide to Software Structure](https://www.amazon.com.br/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164 "By Robert C. Martin")
+- [Artigo: Criando uma aplicação modular muito além do Clean Architecture](https://medium.com/luizalabs/criando-uma-aplica%C3%A7%C3%A3o-modular-muito-al%C3%A9m-do-clean-architecture-5dde3687c5d6 "Modular Architecture")
