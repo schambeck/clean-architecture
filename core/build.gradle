@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'jacoco'
+    id "org.sonarqube" version "4.3.1.3277"
 }
 
 group 'com.schambeck'
@@ -34,5 +35,14 @@ jacocoTestReport {
     dependsOn test
     reports {
         xml.required = true
+    }
+}
+
+sonar {
+    properties {
+        property "sonar.projectKey", "schambeck_clean-architecture"
+        property "sonar.organization", "schambeck"
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.coverage.jacoco.xmlReportPaths", "${buildDir}/reports/jacoco.xml"
     }
 }
