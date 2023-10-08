@@ -1,16 +1,18 @@
 package com.schambeck.cleanarch.entity;
 
 import com.schambeck.cleanarch.entity.vo.TypeNotification;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.UUID;
 
-@Data
+@Getter
+@Setter
 @Builder(toBuilder = true)
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Notification implements Serializable {
 
+    @EqualsAndHashCode.Include
     private UUID id;
     private TypeNotification type;
     private String title;

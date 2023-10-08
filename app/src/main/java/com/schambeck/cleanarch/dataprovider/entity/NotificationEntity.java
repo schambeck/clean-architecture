@@ -2,11 +2,10 @@ package com.schambeck.cleanarch.dataprovider.entity;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.UUID;
+
+import static javax.persistence.EnumType.STRING;
 
 @Entity
 @Table(name = "notification")
@@ -20,6 +19,7 @@ public class NotificationEntity {
     @Id
     private UUID id;
 
+    @Enumerated(STRING)
     @Column(name = "type")
     private TypeNotification type;
 

@@ -6,3 +6,6 @@ CREATE TABLE IF NOT EXISTS notification (
     link VARCHAR(1024),
     read BOOLEAN NOT NULL
 );
+
+INSERT INTO notification (id, type, title, message, link, read)
+VALUES ('29f893c4-67bf-4d77-afa1-681587a67ada', 'SSE', 'Order created #1', 'Created at 2023-02-03', '/orders/1', false);
