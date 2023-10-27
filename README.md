@@ -10,7 +10,7 @@ simulating a physically **modular** division into **packages** with *config*, *e
 ![simple-clean-architecture.png](simple-clean-architecture.png)
 
 # Tech Stack
-- Java 11
+- Java 17
 - Spring Boot
 - PostgreSQL, Flyway
 - JUnit 5, Mockito, JaCoCo
